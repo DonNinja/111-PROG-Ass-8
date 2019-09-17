@@ -27,14 +27,31 @@ def user_direction(user_input, location):
     
     elif user_input.upper == 'W':
         location += move_west()
+    return location
+        
+def whereTo(location):
+    if location == 1.1 or location == 2.1:
+        print("You can travel (N)orth")
+    elif location == 1.2:
+        print("You can travel (N)orth or (E)ast or (S)outh")
+    elif location == 1.3:
+        print("You can travel (E)ast or (S)outh")
+    elif location == 2.3:
+        print("You can travel (E)ast or (W)est")
+    elif location == 2.2 or location == 3.3:
+        print("You can travel (S)outh or (W)est")
+    elif location == 3.2:
+        print("You can travel (N)orth or (S)outh")
+        
+print(location)
 
-
-
-
-
-while 1.1 <= location <= 1.3 or 2.1 <= location <= 2.3 or 3.1 <= location <= 3.3:
-user_input = 'Direction: '
-location = 1.1
+while location >= 1.1 and location <= 1.3 or location >= 2.1 and location <= 2.3 or location >= 3.1 and location <= 3.3:
+    whereTo(location)
+    user_input = input('Direction: ')
+    prev_location = location
+    location = user_direction(user_input, location)
+    print(user_direction(user_input, location))
+    
 
 
 else:
