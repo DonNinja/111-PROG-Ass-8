@@ -3,7 +3,7 @@
 # based on the tile he's at
 # The player starts at tile 1,1 and wins once he 
 # reaches 3, 1
-location = 1
+location = 1.1
 
 def move_north():
     return .1
