@@ -45,19 +45,13 @@ def whereTo(location):
         
 print(location)
 
-while location >= 10 and location <= 13 or location >= 21 and location <= 23 or location >= 31 and location <= 33:
-    whereTo(location)
+while location != 31:
     user_input = input('Direction: ')
     prev_location = location
-    print(user_direction(user_input, location))
-    location = user_direction(user_input, location)
-<<<<<<< HEAD
-=======
-   
->>>>>>> 847ddf8beaeb937d177352239b9fc2d2074b06a7
-    
-
-
-else:
-    print("invalid direction")
-    location = prev_location
+    if location >= 10 and location <= 13 or location >= 21 and location <= 23 or location >= 31 and location <= 33:
+        whereTo(location)
+        print(user_direction(user_input, location))
+        location = user_direction(user_input, location)
+    if not(location >= 10 and location <= 13 or location >= 21 and location <= 23 or location >= 31 and location <= 33):
+        print("invalid direction")
+        location = prev_location
