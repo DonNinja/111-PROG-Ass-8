@@ -49,8 +49,8 @@ while location >= 1.1 and location <= 1.3 or location >= 2.1 and location <= 2.3
     whereTo(location)
     user_input = input('Direction: ')
     prev_location = location
-    location = user_direction(user_input, location)
     print(user_direction(user_input, location))
+    location = user_direction(user_input, location)
     
 
 
